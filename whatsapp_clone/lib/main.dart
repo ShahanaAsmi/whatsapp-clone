@@ -1,7 +1,11 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/camera/camera_screen.dart';
 import 'package:whatsapp_clone/home/home_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  cameras = await availableCameras();
   runApp(const MyApp());
 }
 
